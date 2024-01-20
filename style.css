@@ -1,18 +1,17 @@
 body {
     padding-top: 100px;
-    display: block;
-    position: relative;
     display: flex;  
     justify-content: center;
+    flex: 1 auto;
+    padding: var(--padding-card,2rem);
 }
 
 .card{
-    align-items: center;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     background-color: #1f3b5f;
     border-radius: 20px;
     width: 500px;
-    height: 300px;
+    height: 300px; 
     display: flex;
     flex: 1 auto;
     flex-direction: column;
@@ -22,7 +21,8 @@ body {
 }
 
 .up{
-    width: 100px;
+    justify-content: center;
+    padding: 0.5rem;
     color: azure;
     font-family: "Lato",Sans-serif;
     font-size: 15px;
@@ -31,7 +31,8 @@ body {
 }
 
 .down{
-    width: 100px;
+    justify-content: center;
+    padding: 0.5rem;
     color: azure;
     font-family: "Lato",Sans-serif;
     font-size: 15px;
@@ -43,4 +44,22 @@ body {
     font-size: 25px;
     color: rgb(255, 255, 255);
     font-family: "Lato",Sans-serif;
+}
+
+.PrimEntrada{
+    width: 80px;
+    padding-right: 5rem;
+}
+
+.PrimSaida{
+    width: 80px;
+}
+
+.SegEntrada{
+    padding-right: 5rem;
+    width: 80px;
+}
+
+.SegSaida{
+    width: 80px;
 }
