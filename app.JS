@@ -1,6 +1,3 @@
-
-
-
 function calculaHoras() {
 
     var hEntrada = new Date("01/01/1990 " + document.getElementById("primeiraentrada").value + ":00");
@@ -9,6 +6,8 @@ function calculaHoras() {
     var hSaida = new Date("01/01/1990 " + document.getElementById("segundasaida").value + ":00");
     var hTotal = new Date("01/01/1990 00:00:00")
     var hIntervalo = new Date("01/01/1990 00:00:00")
+
+
 
     //hIntervalo.setHours(hSaidaIntervalo.getHours() - hVoltaIntervalo.getHours())
     //hIntervalo.setMinutes(hSaidaIntervalo.getMinutes() - hVoltaIntervalo.getMinutes())
