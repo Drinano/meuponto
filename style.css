@@ -9,15 +9,22 @@ body {
 .card{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     background-color: #1f3b5f;
-    border-radius: 20px;
-    width: 500px;
-    height: 300px; 
-    display: flex;
-    flex: 1 auto;
-    flex-direction: column;
-    gap: 0.5rem;
+    border-radius: 20px; 
+    width: 50vmin;
+    height: 30vmin; 
     padding: var(--padding-card,2rem);
     position: fixed;     
+    
+}
+
+.titulo{
+    text-align: center;
+    font-size: 2.0vmin;
+    color: rgb(255, 255, 255);
+    font-family: "Lato",Sans-serif;
+    position: static;
+    display: grid;
+    transform: translate(-1%, -80%);
 }
 
 .up{
@@ -25,9 +32,14 @@ body {
     padding: 0.5rem;
     color: azure;
     font-family: "Lato",Sans-serif;
-    font-size: 15px;
-    display: flex; 
-    flex-direction: row;
+    top: 40%;
+    left: 36%;
+    transform: translate(10%, -10%);
+    display: grid;  
+    grid-gap: 5rem;  
+    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+    grid-template-rows: repeat(2, 4rem); 
+    font-size: 2.0vmin; 
 }
 
 .down{
@@ -35,31 +47,73 @@ body {
     padding: 0.5rem;
     color: azure;
     font-family: "Lato",Sans-serif;
-    font-size: 15px;
-    display: flex; 
-    flex-direction: row;
+    top: 50%;
+    left: 46%;
+    transform: translate(10%, -75%);
+    display: grid;  
+    grid-gap: 5rem;  
+    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+    grid-template-rows: repeat(2, 4rem);  
+    font-size: 2.0vmin; 
 }
 
-.titulo{
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    font-family: "Lato",Sans-serif;
-}
+
 
 .PrimEntrada{
-    width: 80px;
-    padding-right: 5rem;
+    width: 10vmin;
+    display: grid;
+    grid-gap: 1vmin;
+    grid-template-columns: repeat(auto-fit, minmax(5vmin, 100vmin));   
 }
 
 .PrimSaida{
-    width: 80px;
+    width: 10vmin;
+    display: grid;
+    grid-gap: 1vmin;
+    grid-template-columns: repeat(auto-fit, minmax(5vmin, 100vmin));
 }
 
 .SegEntrada{
-    padding-right: 5rem;
-    width: 80px;
+    width: 10vmin;
+    display: grid;
+    grid-gap: 1vmin;
+    grid-template-columns: repeat(auto-fit, minmax(5vmin, 100vmin));
 }
 
 .SegSaida{
-    width: 80px;
+    width: 10vmin;
+    display: grid;
+    grid-gap: 1vmin;
+    grid-template-columns: repeat(auto-fit, minmax(5vmin, 100vmin));
+}
+
+.botao{
+    position:absolute; 
+    top:88%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.regras{
+    text-align: center;
+    font-size: 2.0vmin;
+    color: rgb(0, 0, 0);
+    font-family: "Lato",Sans-serif;
+    position: fixed;
+    display: grid;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.descricaoRegras {
+    text-align: center;
+    font-size: 2.0vmin;
+    color: rgb(0, 0, 0);
+    font-family: "Lato",Sans-serif;
+    position: fixed;
+    display: grid;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, -50%);  
+    line-height: 4.5vmin;
 }
