@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     -->
@@ -47,25 +47,51 @@
 
         </div>
 
-        <div class="botao">
-            <button id="btn-calcular" onclick="calculaHoras()"> Calcular </button>
-            <button id="btn-regras" onclick="calculaHoras()"> Regras </button>
+        <div id="botao">
+            <button id="regras">Regras</button>
+            <button id="calculo" onclick="calculaHoras()">Calcular</button>
         </div>
 
-<!--        <div class="horaCalc">
-            <input type="text" id="hora" readonly="">
+        <!-- <button id="btn-calcular" onclick="calculaHoras()"> Calcular </button> -->
+        <div id="fade-regras" class="hide-regras"></div>
+        <div id="modal-regras" class="hide-regras">
+            <div class="modal-header-regras">
+                <h2> REGRAS PARA A BATIDA DO PONTO: </h2>
+                <button id="fecha-modal-regras">Fechar</button>
+            </div>
+            <div class="modal-body-regras">
+                <div class="regras">
+
+                </div>
+                <div class="descricaoRegras">
+                    <p> <b>Fica Expressamente proibido a todos os empregados e cargos de chefia de qualquer
+                            natureza:</b> <br> ❯ Ultrapassar a jornada de trabalho prevista em lei; <br> ❯ Retornar do
+                        horário de descanso para refeições antes de completar ao menos 1(uma) hora e não ultrapassar o
+                        tempo de 2(duas) horas; <br>
+                        ❯ Observar o intervalo de 11 (onze) horas entre uma jornada e outra; <br> ❯ Obedecer ao descanso
+                        semanal de 24 horas consecutivas; <br> ❯ Não ultrapassar 10 horas de trabalho diário; <br> ❯
+                        Respeitar o intervalo de 15 minutos nas jornadas de 4 a 6 horas diárias. </p>
+                </div>
+            </div>
         </div>
--->
-    </div>
 
-    <div class="regras">
-        <h2> REGRAS PARA A BATIDA DO PONTO: </h2>
-    </div>
-    <div class="descricaoRegras">
-        <p> <b>Fica Expressamente proibido a todos os empregados e cargos de chefia de qualquer natureza:</b> <br> ❯ Ultrapassar a jornada de trabalho prevista em lei; <br> ❯ Retornar do horário de descanso para refeições antes de completar ao menos 1(uma) hora e não ultrapassar o tempo de 2(duas) horas; <br>
-            ❯ Observar o intervalo de 11 (onze) horas entre uma jornada e outra; <br> ❯ Obedecer ao descanso semanal de 24 horas consecutivas; <br> ❯ Não ultrapassar 10 horas de trabalho diário; <br> ❯ Respeitar o intervalo de 15 minutos nas jornadas de 4 a 6 horas diárias. </p>
-    </div>
+        <div id="fade-calculo" class="hide-calculo"></div>
+        <div id="modal-calculo" class="hide-calculo">
+            <div class="modal-header-calculo">
+                <h2> TOTAL HORAS TRABALHADAS </h2>
+                <button id="fecha-modal-calculo">Fechar</button>
+            </div>
+            <div class="modal-body-calculo">
+                <div class="calculo">
+                    
+                </div>
+                <div class="descrição-calculo">
+                    <input type="text" class="resposta" readonly="" value="">
+                </div>
+            </div>
+        </div>
 
+    </div>
 </body>
 
 </html>

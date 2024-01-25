@@ -1,4 +1,33 @@
 
+//Abre modal das regras
+const openModalButton = document.querySelector("#regras");
+const closeModalButton = document.querySelector("#fecha-modal-regras");
+const modal = document.querySelector("#modal-regras");
+const fade = document.querySelector("#fade-regras");
+
+const toggleModal = () => {
+    modal.classList.toggle("hide-regras");
+    fade.classList.toggle("hide-regras");
+};
+
+[openModalButton, closeModalButton, fade].forEach((el) => {
+    el.addEventListener("click", () => toggleModal());
+});
+
+const openModalButtonC = document.querySelector("#calculo");
+const closeModalButtonC = document.querySelector("#fecha-modal-calculo");
+const modalC = document.querySelector("#modal-calculo");
+const fadeC = document.querySelector("#fade-calculo");
+
+const toggleModalC = () => {
+    modalC.classList.toggle("hide-calculo");
+    fadeC.classList.toggle("hide-calculo");
+};
+
+[openModalButtonC, closeModalButtonC, fadeC].forEach((el) => {
+    el.addEventListener("click", () => toggleModalC());
+});
+
 function calculaHoras() {
 
     //Recebe as datas inseridas na página
@@ -49,13 +78,13 @@ function calculaHoras() {
     //Calcula as horas do intervalo
     var horaIntervalo = horaVoltaIntervalo - horaSaidaIntervalo
 
-    if (minutoVoltaIntervalo < minutoSaidaIntervalo){
+    if (minutoVoltaIntervalo < minutoSaidaIntervalo) {
         var minutoRestanteIntervalo = 60 - minutoSaidaIntervalo
         var minutoIntervalo = minutoRestanteIntervalo + minutoVoltaIntervalo
         horaIntervalo = horaIntervalo - 1
     }
 
-    if (minutoVoltaIntervalo >= minutoSaidaIntervalo){
+    if (minutoVoltaIntervalo >= minutoSaidaIntervalo) {
         var minutoIntervalo = minutoVoltaIntervalo - minutoSaidaIntervalo
     }
 
@@ -68,6 +97,11 @@ function calculaHoras() {
         minutoTotal = minutoTotal - 60
     }
 
+    if (minutoTotal == 60) {
+        horaTotal = horaTotal + 1
+        minutoTotal = 0
+    }
+
     /*
     if(horaTotal < 10){
         horaTotal = "0" + horaTotal
@@ -77,13 +111,5 @@ function calculaHoras() {
         minutoTotal = "0" + minutoTotal
     }
     */
-
-    if (horaTotal > 10) {
-        alert("Horas Trabalhadas: " + horaTotal + ":" + minutoTotal + "--- Não bata o ponto")
-    } 
-
-    if ((minutoIntervalo < 60) || horaIntervalo > 2) {
-        alert("Horas de Intervalo: " + horaIntervalo + ":" + minutoIntervalo + "--- Não bata o ponto")
-    }
 
 }
